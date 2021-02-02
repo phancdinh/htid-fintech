@@ -36,8 +36,8 @@
 }
 
 .home-container {
-    text-align: center;
-    padding: 20px 30px;
+    text-align: right;
+    /*padding: 20px 30px;*/
 }
 
 .token-request-block,
@@ -70,6 +70,37 @@
     }
 }
 
-.ht-id {
+.ht-id,
+.welcome {
     color: coral;
+}
+
+html body {
+    height: 100%;
+    background-image: url("img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("img/logo.png");
+    width: 200px;
+    height: 156px;
+}
+
+.profile-menu {
+    color: white;
+}
+
+.main-contain {
+    margin-top: 330px;
+}
+.item-ht {
+    height: 250px;
+    text-align: center;
+}
+.item-ht img {
+    width: 200px;
 }

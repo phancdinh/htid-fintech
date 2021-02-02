@@ -19,22 +19,31 @@ export async function generateToken() {
     }
 }
 
-export async function fetchUserProfile(username, accessToken, apimAccesstoken) {
-    if (!accessToken || !apimAccesstoken) {
+export async function fetchUserProfile(ht_id, accessToken, apimAccesstoken) {
+    if (!accessToken) {
         return;
     }
-
     try {
-        const { data: profile } = await axios.get(
-            `${CONFIG.APIM_URL}/user-profile-dev/1.0.0/api/profiles/${username}`,
-            {
-                headers: {
-                    Authorization: `Bearer ${accessToken}`,
-                    "X-HT-APIM-Authorization": `Bearer ${apimAccesstoken}`,
-                },
-            },
-        );
-        return profile;
+        // const { data: profile } = await axios.get(
+        //     `https://app-profile-dev.hungthinhcorp.com.vn/get-basic-info`,
+        //     {
+        //         headers: {
+        //             Authorization: `Bearer ${accessToken}`,
+        //         },
+        //     },
+        // );
+        // return profile;
+        return {
+            ht_id: "1040779300653348",
+            gender: "male",
+            nationalities: ["VietNam", "USA"],
+            dob: "19901031",
+            full_name: "Phan Công Định",
+            pob: "64/5a",
+            hometown: "64/5a ấp hậun, xã Bà Điểm, H.Hoc mon, HCM",
+            permanent_address: "64/5a ân, xã Bà Điểm, H.Hoc mon, HCM",
+            last_modified_date: "20210202093017",
+        };
     } catch (error) {
         console.log(error);
     }

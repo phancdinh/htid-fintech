@@ -11,21 +11,21 @@ export const CONFIG = {
     LOGOUT_URL: `${HOST}/oidc/logout`,
     RESPONSE_TYPE: "code",
     SCOPE: "openid profile phone",
-    REDIRECT_URI: "https://ht-id-spa-demo.herokuapp.com",
+    REDIRECT_URI: "https://topen-car.herokuapp.com",
 
     // id of 'Demo - SPA' Service Provider
-    CLIENT_ID: "C7Uj0Civ7kH6S85tEzbKxttBj_oa",
+    CLIENT_ID: "djJZinXs_OeJ9j5R7ETec4KFLGMa",
     // secret of 'Demo - SPA' Service Provider
-    CLIENT_SECRET: "vwUXB7scqHfbDXUH5f1WqlfwJcQa",
+    CLIENT_SECRET: "pWVTzZStieMoLBfRFFqLMUhzhEIa",
 
     GRANT_TYPE: "authorization_code",
-    CLIENT_URL: `https://localhost:9000`,
+    CLIENT_URL: `https://localhost:8000`,
     COOKIE_PATH: "/",
 
     // endpoint of User Profile service
     PROFILE_SERVICE_URL: "https://profile-demo-ht.herokuapp.com",
 
-    APIM_URL: "https://htapi.hungthinhcorp.com.vn",
+    APIM_URL: "http://api-profile-dev.hungthinhcorp.com.vn:8080",
     // consumer key of API subscription on devportal
     APIM_ID: "e14sQyGGufr7dW5N8omkS2xHeVga",
     // consumer secret of API subscription on devportal
