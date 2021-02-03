@@ -49,7 +49,6 @@ export default function Home() {
                 tokenResponse: _tokenResponse,
                 isLoggedIn: true,
             });
-
             fetchUserProfile(idToken.ht_id, session.ACCESS_TOKEN);
         } else {
             handleRequestToken();
