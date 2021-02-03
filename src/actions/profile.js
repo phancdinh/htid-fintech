@@ -24,15 +24,20 @@ export async function fetchUserProfile(ht_id, accessToken, apimAccesstoken) {
         return;
     }
     try {
-        // const { data: profile } = await axios.get(
-        //     `https://app-profile-dev.hungthinhcorp.com.vn/get-basic-info`,
-        //     {
-        //         headers: {
-        //             Authorization: `Bearer ${accessToken}`,
-        //         },
-        //     },
-        // );
-        // return profile;
+        const { data: profile } = await axios.get(
+            `https://app-profile-dev.hungthinhcorp.com.vn/get-basic-info`,
+            {
+                headers: {
+                    Authorization: `Bearer ${accessToken}`,
+                },
+                params: {
+                    ht_id,
+                    token: accessToken,
+                },
+            },
+        );
+        return profile;
+    } catch (error) {
         return {
             ht_id: "1040779300653348",
             gender: "male",
@@ -44,7 +49,6 @@ export async function fetchUserProfile(ht_id, accessToken, apimAccesstoken) {
             permanent_address: "64/5a ân, xã Bà Điểm, H.Hoc mon, HCM",
             last_modified_date: "20210202093017",
         };
-    } catch (error) {
         console.log(error);
     }
 }

@@ -16,6 +16,7 @@ export default function Home() {
     const pkcePair = useRef(getPKCE());
 
     const [profile, setProfile] = useState({});
+    const [showDialog, setShowDialog] = useState(true);
 
     const [state, setState] = useState({
         idToken: {},
@@ -106,11 +107,14 @@ export default function Home() {
     function handleLogoutBtnClick() {
         dispatchLogout();
     }
+    function closeDialog() {
+        setShowDialog(false);
+    }
 
     return (
         <div className="home-container">
-            {/*<h1 className="ht-id">Hồ Tràm Complex</h1>*/}
-            <br />
+            <h1 className="ht-id text-center">HUNG THINH FINTECH</h1>
+
             {state.isLoggedIn ? (
                 <>
                     <div className="profile-menu">
@@ -125,54 +129,35 @@ export default function Home() {
                         </button>
                     </div>
                     {profile && (
-                        <div className="container main-contain">
-                            <div className="row">
-                                <div className="col-4 mb-5 item-ht">
-                                    <a href="#">
-                                        <img
-                                            className="img-fluid"
-                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.jpg"
-                                        />
-                                    </a>
-                                    <div className="text-center pt-4">
-                                        <h5>Xe 5 chỗ</h5>
-                                        <p>
-                                            <span className="mr-1">
-                                                <strong>Chỉ từ 500 triệu</strong>
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="col-4 mb-5 item-ht">
-                                    <a href="#">
-                                        <img
-                                            className="img-fluid"
-                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.jpg"
-                                        />
-                                    </a>
-                                    <div className="text-center pt-4">
-                                        <h5>Xe 7 chỗ</h5>
-                                        <p>
-                                            <span className="mr-1">
-                                                <strong>Chỉ từ 1,2 tỷ</strong>
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="col-4 mb-5 item-ht">
-                                    <a href="#">
-                                        <img
-                                            className="img-fluid"
-                                            src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.jpg"
-                                        />
-                                    </a>
-                                    <div className="text-center pt-4">
-                                        <h5>Siêu xe</h5>
-                                        <p>
-                                            <span className="mr-1">
-                                                <strong>Chỉ từ 10tỷ</strong>
-                                            </span>
-                                        </p>
+                        <div className={`success-show ${showDialog ? "show" : ""}`}>
+                            <div className="modal" tabIndex="-1" role="dialog">
+                                <div className="modal-dialog " role="document">
+                                    <div className="modal-content">
+                                        <div className="modal-header">
+                                            <h5 className="modal-title">Modal title</h5>
+                                            <button
+                                                type="button"
+                                                className="close"
+                                                data-dismiss="modal"
+                                                aria-label="Close"
+                                                onClick={closeDialog}
+                                            >
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div className="modal-body">
+                                            <p>Modal body text goes here.</p>
+                                        </div>
+                                        <div className="modal-footer">
+                                            <button
+                                                type="button"
+                                                className="btn btn-secondary"
+                                                onClick={closeDialog}
+                                                data-dismiss="modal"
+                                            >
+                                                Đóng
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

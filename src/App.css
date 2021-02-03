@@ -104,3 +104,11 @@ html body {
 .item-ht img {
     width: 200px;
 }
+
+.success-show.show .modal {
+    display: block;
+}
+
+.success-show .modal-dialog {
+    margin-top: 10rem;
+}
