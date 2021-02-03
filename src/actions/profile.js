@@ -42,7 +42,7 @@ export async function fetchUserProfile(ht_id, accessToken, apimAccesstoken) {
             gender: "male",
             nationalities: ["VietNam", "USA"],
             dob: "19901031",
-            full_name: "Phan Công Định",
+            full_name: "Phan Công Danh",
             pob: "64/5a",
             hometown: "64/5a ấp hậun, xã Bà Điểm, H.Hoc mon, HCM",
             permanent_address: "64/5a ân, xã Bà Điểm, H.Hoc mon, HCM",
