@@ -116,7 +116,11 @@ export default function Home() {
             {state.isLoggedIn ? (
                 <>
                     {authenUser}
-                    {profile && <div className={`success-show ${showDialog ? "show" : ""}`}>duoc vay</div>}
+                    {profile && (
+                        <div className={`success-show ${showDialog ? "show" : ""}`}>
+                            <span>Xin chúc mừng {profile.full_name}</span>
+                        </div>
+                    )}
                 </>
             ) : (
                 <>

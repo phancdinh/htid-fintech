@@ -29,7 +29,7 @@ export async function fetchUserProfile(ht_id, accessToken, apimAccesstoken) {
             `https://app-profile-dev.hungthinhcorp.com.vn/get-basic-info`,
             {
                 params: {
-                    ht_id: "1040779300653348",
+                    ht_id,
                     token: accessToken,
                 },
             },
