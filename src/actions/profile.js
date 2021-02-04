@@ -29,7 +29,7 @@ export async function fetchUserProfile(ht_id, accessToken, apimAccesstoken) {
             `https://app-profile-dev.hungthinhcorp.com.vn/get-basic-info`,
             {
                 params: {
-                    ht_id,
+                    ht_id: "1040779300653348",
                     token: accessToken,
                 },
             },
@@ -42,7 +42,7 @@ export async function fetchUserProfile(ht_id, accessToken, apimAccesstoken) {
             gender: "male",
             nationalities: ["VietNam", "USA"],
             dob: "19901031",
-            full_name: "Phan Công Danh",
+            full_name: "Topener",
             pob: "64/5a",
             hometown: "64/5a ấp hậun, xã Bà Điểm, H.Hoc mon, HCM",
             permanent_address: "64/5a ân, xã Bà Điểm, H.Hoc mon, HCM",

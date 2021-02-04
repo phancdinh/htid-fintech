@@ -81,34 +81,55 @@ html body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url("img/logo.png");
-    width: 200px;
-    height: 156px;
+
+.btn-wrapper {
+    margin-top: 30px;
+    margin-right: 120px;
+}
+button.btn-common {
+    border: 0;
 }
 
-.profile-menu {
-    color: white;
+button.login {
+    background: url("./img/dang-nhap.jpg");
+    width: 201px;
+    height: 61px;
 }
 
-.main-contain {
-    margin-top: 330px;
-}
-.item-ht {
-    height: 250px;
-    text-align: center;
-}
-.item-ht img {
-    width: 200px;
+button.sign-up {
+    background: url("./img/dang-ky.jpg");
+    width: 201px;
+    height: 61px;
 }
 
-.success-show.show .modal {
+.success-show {
+    display: none;
+    margin: 100px auto;
+    width: 800px;
+    height: 500px;
+    background: white;
+}
+
+.success-show.show {
     display: block;
 }
 
-.success-show .modal-dialog {
-    margin-top: 10rem;
+.profile-menu {
+    color: #db5b07;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    right: 80px;
+    width: 600px;
+    height: 108px;
+    align-items: center;
+}
+
+.profile-menu a {
+    color: #db5b07;
+}
+
+.profile-menu img {
+    width: 45px;
 }

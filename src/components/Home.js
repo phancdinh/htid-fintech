@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import ReactJson from "react-json-view";
 import { sendAuthorizationRequest, sendTokenRequest } from "../actions/sign-in";
 import { dispatchLogout } from "../actions/sign-out";
 import {
@@ -10,6 +9,7 @@ import {
     setCodeVerifier,
 } from "../actions/session";
 import getPKCE from "../actions/pkce";
+import AuthenUser from "./AuthenUser";
 import { fetchUserProfile as fetchUserProfileApi, generateToken } from "../actions/profile";
 
 export default function Home() {
@@ -109,68 +109,24 @@ export default function Home() {
     function closeDialog() {
         setShowDialog(false);
     }
+    const authenUser = AuthenUser(profile, handleLogoutBtnClick);
 
     return (
         <div className="home-container">
-            <h1 className="ht-id text-center">HUNG THINH FINTECH</h1>
-
             {state.isLoggedIn ? (
                 <>
-                    <div className="profile-menu">
-                        {profile && (
-                            <span className="">
-                                <span>{profile.full_name}, </span>
-                                <span>HungThinh Id của bạn là {profile.ht_id} </span>
-                            </span>
-                        )}
-                        <button className="btn btn-danger" onClick={handleLogoutBtnClick}>
-                            Đăng Xuất
-                        </button>
-                    </div>
-                    {profile && (
-                        <div className={`success-show ${showDialog ? "show" : ""}`}>
-                            <div className="modal" tabIndex="-1" role="dialog">
-                                <div className="modal-dialog " role="document">
-                                    <div className="modal-content">
-                                        <div className="modal-header">
-                                            <h5 className="modal-title">Modal title</h5>
-                                            <button
-                                                type="button"
-                                                className="close"
-                                                data-dismiss="modal"
-                                                aria-label="Close"
-                                                onClick={closeDialog}
-                                            >
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div className="modal-body">
-                                            <p>Modal body text goes here.</p>
-                                        </div>
-                                        <div className="modal-footer">
-                                            <button
-                                                type="button"
-                                                className="btn btn-secondary"
-                                                onClick={closeDialog}
-                                                data-dismiss="modal"
-                                            >
-                                                Đóng
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
+                    {authenUser}
+                    {profile && <div className={`success-show ${showDialog ? "show" : ""}`}>duoc vay</div>}
                 </>
             ) : (
                 <>
-                    <button className="btn btn-primary float-right" onClick={handleLoginBtnClick}>
-                        Đăng Nhập
-                    </button>
-                    <button className="btn btn-primary float-right mr-2" onClick={handleSignUpBtnClick}>
-                        Đăng Ký
-                    </button>
+                    <div className="btn-wrapper">
+                        <button className="btn-common float-right login" onClick={handleLoginBtnClick} />
+                        <button
+                            className="btn-common float-right mr-4 sign-up"
+                            onClick={handleSignUpBtnClick}
+                        />
+                    </div>
                 </>
             )}
         </div>
