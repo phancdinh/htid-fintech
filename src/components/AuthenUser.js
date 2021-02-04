@@ -2,6 +2,7 @@ import icon1 from "../img/icon1.png";
 import icon2 from "../img/icon2.png";
 import icon3 from "../img/icon3.png";
 import icon4 from "../img/icon4.png";
+import React from "react";
 
 export default function AuthenUser(profile, handleLogoutBtnClick) {
     return (
@@ -15,12 +16,14 @@ export default function AuthenUser(profile, handleLogoutBtnClick) {
                 )}
             </div>
             <div className="ml-2">
-                <img src={getIconFromHtId(profile.ht_id)} alt="" />
-            </div>
-            <div className="ml-2">
-                <a href={"javascript:void()"} onClick={handleLogoutBtnClick}>
-                    Đăng Xuất
-                </a>
+                <div className="dropdown">
+                    <button className="dropbtn">
+                        <img src={getIconFromHtId(profile.ht_id)} alt="" />
+                    </button>
+                    <div className="dropdown-content">
+                        <a href={"javascript:void()"} onClick={handleLogoutBtnClick} />
+                    </div>
+                </div>
             </div>
         </div>
     );
