@@ -11,6 +11,7 @@ import {
 import getPKCE from "../actions/pkce";
 import AuthenUser from "./AuthenUser";
 import { fetchUserProfile as fetchUserProfileApi, generateToken } from "../actions/profile";
+import { CONFIG } from "../config";
 
 export default function Home() {
     const pkcePair = useRef(getPKCE());
@@ -100,7 +101,7 @@ export default function Home() {
     }
 
     function handleSignUpBtnClick() {
-        window.open("https://app-profile-dev.hungthinhcorp.com.vn/account/register", "_blank");
+        window.open(CONFIG.REGISTER_URL, "_blank");
     }
 
     function handleLogoutBtnClick() {

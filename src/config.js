@@ -24,6 +24,7 @@ export const CONFIG = {
 
     // endpoint of User Profile service
     PROFILE_SERVICE_URL: "https://profile-demo-ht.azurewebsites.net",
+    REGISTER_URL: "https://profile-dev.hungthinhcorp.com.vn/account/register",
 
     APIM_URL: "http://api-profile-dev.hungthinhcorp.com.vn:8080",
     // consumer key of API subscription on devportal
