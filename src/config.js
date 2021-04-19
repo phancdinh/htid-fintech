@@ -1,4 +1,4 @@
-const HOST = "https://is-staging.hungthinhcorp.com.vn";
+const HOST = "https://is-dev.hungthinhcorp.com.vn";
 const LOCAL_HOST = "https://localhost:9443";
 
 export const CONFIG = {

@@ -1,0 +1,36 @@
+<publishData>
+    <publishProfile profileName="topen-car - Web Deploy" publishMethod="MSDeploy"
+                    publishUrl="topen-car.scm.azurewebsites.net:443" msdeploySite="topen-car" userName="$topen-car"
+                    userPWD="N6ganqad1NKHFuBXek3ePphSWePdiMXPJSjQ4Ch5Stat3KvWr5MgwoY4Zlhj"
+                    destinationAppUrl="http://topen-car.azurewebsites.net" SQLServerDBConnectionString=""
+                    mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com"
+                    webSystem="WebSites">
+        <databases/>
+    </publishProfile>
+    <publishProfile profileName="topen-car - FTP" publishMethod="FTP"
+                    publishUrl="ftp://waws-prod-sg1-041.ftp.azurewebsites.windows.net/site/wwwroot"
+                    ftpPassiveMode="True" userName="topen-car\$topen-car"
+                    userPWD="N6ganqad1NKHFuBXek3ePphSWePdiMXPJSjQ4Ch5Stat3KvWr5MgwoY4Zlhj"
+                    destinationAppUrl="http://topen-car.azurewebsites.net" SQLServerDBConnectionString=""
+                    mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com"
+                    webSystem="WebSites">
+        <databases/>
+    </publishProfile>
+    <publishProfile profileName="topen-car - Zip Deploy" publishMethod="ZipDeploy"
+                    publishUrl="topen-car.scm.azurewebsites.net:443" userName="$topen-car"
+                    userPWD="N6ganqad1NKHFuBXek3ePphSWePdiMXPJSjQ4Ch5Stat3KvWr5MgwoY4Zlhj"
+                    destinationAppUrl="http://topen-car.azurewebsites.net" SQLServerDBConnectionString=""
+                    mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com"
+                    webSystem="WebSites">
+        <databases/>
+    </publishProfile>
+    <publishProfile profileName="topen-car - ReadOnly - FTP" publishMethod="FTP"
+                    publishUrl="ftp://waws-prod-sg1-041dr.ftp.azurewebsites.windows.net/site/wwwroot"
+                    ftpPassiveMode="True" userName="topen-car\$topen-car"
+                    userPWD="N6ganqad1NKHFuBXek3ePphSWePdiMXPJSjQ4Ch5Stat3KvWr5MgwoY4Zlhj"
+                    destinationAppUrl="http://topen-car.azurewebsites.net" SQLServerDBConnectionString=""
+                    mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com"
+                    webSystem="WebSites">
+        <databases/>
+    </publishProfile>
+</publishData>
