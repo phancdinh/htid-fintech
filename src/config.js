@@ -1,4 +1,4 @@
-const HOST = "https://htid.hungthinhcorp.com.vn";
+const HOST = "https://is-dev.hungthinhcorp.com.vn";
 const LOCAL_HOST = "https://localhost:9443";
 
 export const CONFIG = {
@@ -26,7 +26,7 @@ export const CONFIG = {
     PROFILE_SERVICE_URL: "https://profile-demo-ht.azurewebsites.net",
     REGISTER_URL: "https://profile-dev.hungthinhcorp.com.vn/account/register",
 
-    APIM_URL: "http://api-profile-dev.hungthinhcorp.com.vn:8080",
+    APIM_URL: "http://profile-dev.hungthinhcorp.com.vn:8080",
     // consumer key of API subscription on devportal
     APIM_ID: "e14sQyGGufr7dW5N8omkS2xHeVga",
     // consumer secret of API subscription on devportal
